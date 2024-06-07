@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*,*::before,*::after {
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* header */
+  .header {
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 96px;
+  }
+  .logo {
+    margin-right: 318px;
+  }
+  .logo a {
+    width: 100px;
+    display: block;
+  } 
+  #toggler {
+    display: none;
+  }
+  .hamburger-container {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 16px;
+  }
+  .hamburger-container span {
+    display: block;
+    height: 2px;
+    background-color: #000000;
+    position: relative;
+    transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+    top: 0;
+  }
+  .hamburger-container span:nth-child(2) {
+    margin-top: 7px;
+  }
+  #toggler:checked + label .hamburger-container span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 4px;
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+  }
+  #toggler:checked + label .hamburger-container span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -4px;
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+  }  
+
+
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+  }
+  /* .nav .nav-menu {
+    float: left;
+  } */
+  .nav .nav-menu a{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 4px 8px 4px 8px;
+    color: #000;
+  }
+  /*在PC上隱藏漢堡選單*/
+  .hamburger-container{
+    display: none;
+  }
+  
+  /* banner */
+  .banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #FAFAFA;
+  }
+  .banner-wrap {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .banner-wrap-title {
+    width: 100%;
+    margin-bottom: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 69px;
+    padding-bottom: 69px;
+    position: relative;
+  }
+  .banner-wrap-title .quote-left{
+    position: absolute;
+    top: 0;
+    left: 0; 
+  }
+  .banner-wrap-title .quote-right{
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+  }
+  
+  .title {
+    margin-bottom: 8px;
+    line-height: 2;
+    border-bottom: 4px solid #C1C1C1;
+  
+  }
+  .banner-wrap h4 {
+    font-size: 24px;
+    color: #1E1E1E;
+    margin-bottom: 16px;
+  }
+  .server {
+    max-width: 636px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 59px;
+  }
+  .server li {
+    width: 46%;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .server li p{
+    font-size: 16px;
+    color: #3B3B3B;
+    line-height: 1.5;
+  }
+  .server .title {
+    color: #5B5B5B;
+  }
+  /* 卡片專區 */
+  .works {
+    background: #ffffff;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .works-list {
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .item{
+    width: 48%;
+    margin-bottom: 80px;
+    list-style: none;
+  }
+  .item img {
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+  .wrap {
+    padding-left: 16px;
+  }
+  .wrap h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .wrap p {
+    font-size: 16px;
+    color: #919191;
+    margin-bottom: 24px; 
+  }
+  .works-list-tag {
+    display: flex;
+    flex-direction: row; 
+    
+  }
+  .works-list-tag li {
+    padding: 4px 12px 4px 12px;
+    background: #F1F1F1;
+    margin-right: 16px;
+    border-radius: 16px;
+    line-height: 24px;
+  }
+  .page-number {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 152px;
+  }
+  .page-number li {
+    width: 40px;
+    height: 40px;
+    background: #1E1E1E;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-number li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  /* footer */
+  .footer {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .footer-wrap {
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .footer-left {
+    width: 70%;
+    height: 186px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .footer-logo {
+    margin-bottom: 24px;
+  }
+  .footer-logo p {
+    margin-bottom: 24px;
+  }
+  .footer-email {
+    margin-bottom: 24px;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-btn {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #C1C1C1; 
+    padding: 8px 24px 8px 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    width: 306px;
+  }
+  
+  .social-btn a{
+    color: #3B3B3B;
+    text-decoration: none;
+    display: flex;
+    align-items:center;
+  }
+  
+  .social-btn2 {
+    background: #000;
+  }
+  .social-btn2 a {
+    color: #ffffff;
+    text-decoration: none;  
+  }
+  
+  
+  /* RWD */
+  @media (max-width: 767px){
+    .nav {
+        /*隱藏選單開始*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* max-height: 0px;
+        overflow: hidden; */
+        /*隱藏選單結束*/
+        /* transition: max-height 1s;
+        margin-top: 1px; */
+        /*絕對定位疊在網頁上*/
+        position: absolute;
+        z-index: 100;
+        top: 96px;
+        left: 0;
+        background: #ffffff;
+        width: 100%;
+        /* height: 100vh; */
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out;
+        transform-origin: 50% 0;
+      }
+      #toggler:checked ~ .nav {
+        transform: scaleY(1);
+      }
+
+      .nav .nav-menu{
+        padding: 16px 0;
+        text-align: center;
+
+      }
+      .nav .nav-menu a{
+        transition: all 0.3s;
+      }
+      .nav .nav-menu a:hover{
+        background: #ffffff;
+        color: #3B3B3B;
+      }
+      .hamburger-container{
+        margin: 1em;
+        font-size: 16px;
+        color: #000;
+        display: block;
+      }
+      
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-right: 0;
+      }
+
+      /*jQ點擊後動態在 body 加上 class */
+      .menu-show .nav{
+        max-height: 500px
+      }
+  }
+  
+  
+  @media (max-width: 576px){
+  /*  banner  */
+    .banner-wrap {
+      padding-right: 38px;
+      padding-left: 38px;
+    }
+    .item{
+      width: 98%;
+    }
+    .server {
+      flex-wrap:wrap;
+    }
+    .server li {
+      width: 98%;
+      margin-bottom: 20px;
+    }
+  
+    
+    
+  /* works */
+      .wrap h2 {
+        font-size: 20px;
+      }
+    
+  /* footer */
+      .footer-wrap{
+        flex-direction: column;
+      }
+      .footer-left{
+        align-items: center;
+      }
+    
+  }
+  
+  
+  
